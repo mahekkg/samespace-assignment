@@ -1,26 +1,16 @@
 import React from "react";
-import Header from "./components/Header";
-import UserProfile from "./components/UserProfile";
-import Tabs from "./components/Tabs";
-import SongList from "./components/SongList";
-import SongPlayer from "./components/SongPlayer";
+import Sidebar from "./components/Sidebar";
+import Player from "./components/Player";
+import MainContent from "./components/TrackList";
 
-const App = () => {
+function App() {
   return (
-    <div className="h-screen flex flex-col">
-      <Header />
-      <div className="flex-grow overflow-y-auto px-4 pb-4">
-        <div className="flex flex-col md:flex-row md:space-x-4">
-          <UserProfile />
-          <div className="w-full md:w-3/4">
-            <Tabs />
-            <SongList />
-          </div>
-        </div>
-      </div>
-      <SongPlayer />
+    <div className="flex h-screen bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+      <Sidebar />
+      <MainContent />
+      <Player />
     </div>
   );
-};
+}
 
 export default App;
