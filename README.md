@@ -13,7 +13,7 @@ SimpleAudioPlayer is a lightweight, Spotify-inspired audio player that lets you 
 ## How to Use
 
 ### Installation
-1. Clone or download the repository from [GitHub](https://github.com/mahekkg/nextjs-blog-assignament).
+1. Clone or download the repository from [GitHub](https://github.com/mahekkg/samespace-assignment).
 2. Navigate to the project directory in your terminal.
 
 
