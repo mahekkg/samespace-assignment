@@ -14,16 +14,17 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    // Fetch data from the public API
-    getApiInstance()
-      .get("/")
-      .then((response) => {
+    const fetchSongs = async () => {
+      try {
+        const response = await getApiInstance().get("/");
         setSongs(response?.data?.data);
         setFilteredSongs(response?.data?.data);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error fetching data", error);
-      });
+      }
+    };
+
+    fetchSongs();
   }, []);
 
   const handleTopTracks = () => {
